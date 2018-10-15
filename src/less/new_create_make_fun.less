@@ -1,0 +1,282 @@
+.sett_dl_warp{
+  overflow: hidden;
+  width:480px;
+  .sett_dt{
+    float:left;
+    width:60px;
+    height:60px;
+    .dl_img{
+      width:60px;
+      height:60px;
+    }
+  }
+  dd{
+    // width:390px;
+    margin-left:70px;
+    font-size:12px;
+    .title{
+      line-height: 14px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow:ellipsis;
+    }
+    .goods_id{
+      margin-top:8px;
+        line-height: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+    }
+    .price{
+      margin-top:8px;
+      line-height: 14px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow:ellipsis;
+      span{
+        color:red;
+      }
+    }
+  }
+}
+.warp_btn_back{
+  padding:100px 0;
+  width:300px;
+  margin:0 auto;
+  text-align: center;
+  .dl_img_warp{
+      .success_img{
+        width:60px;
+        height:60px;
+      }
+      dd{
+        color:#E50056;
+        margin-top:45px;
+        font-size:14px;
+      }
+  }
+  .btn_sett{
+    padding:50px 0;
+  }
+}
+.dialog_form{
+  .dialog_setting{
+    margin:10px 0;
+    overflow: hidden;
+    .dialog_setting_left{
+      float:left;
+    }
+    .dialog_setting_right{
+      float:right;
+      line-height: 32px;
+    }
+  }
+  .dialog_setting_explain::before{
+    display: block;
+    content:'';
+    position: absolute;
+    left:0;
+    top:2px;
+    width:2px;
+    height:16px;
+    background:rgba(229,0,86,1);
+  }
+  .dialog_setting_explain{
+    margin:10px 0;
+    font-size:16px;
+    padding-left:10px;
+    height:20px;
+    position:relative;
+    span{
+      color:#ccc;
+      font-size:14px;
+    }
+  }
+}
+
+.new_create_make_fun{
+    background:#fff;
+    .setting_next{
+      text-align: center;
+      padding:20px 0;
+    }
+    .table_setting{
+      padding:20px;
+    }
+    .explain{
+      height:24px;
+      line-height: 24px;
+      color:#f9f9f9;
+      font-size:10px;
+    }
+		.explain{
+      margin:20px;
+			padding:12px 40px;
+			background:#F9F9F9;
+			color:#666;
+			font-size:14px;
+			position: relative;
+		}
+		.explain:before{
+			display: block;
+			content:'';
+			position:absolute;
+			left:15px;
+			top:13px;
+			width:18px;
+			height:18px;
+      background:url(../img/freight/tips.jpg) no-repeat;
+      background-size:contain;
+    }
+    .steps_warp{
+      width:600px;
+      margin:20px auto;
+    }
+    .goods_text_title{
+      overflow: hidden;
+      padding:20px;
+      line-height: 32px;
+      .goods_text_title_left{
+        float:left;
+      }
+      .goods_text_title_right{
+        float:right;
+        .input_value{
+          width:200px;
+          margin-right:10px;
+          display: inline-block;
+        }
+      }
+    }
+    .table_goods_warp{
+        padding:0 20px 20px 20px;
+      .table_goods_warp_ul{
+        overflow: hidden;
+        padding:10px 0;
+        .active{
+            position: relative;
+        }
+        .active::before{
+            display: block;
+            content:'';
+            position: absolute;
+            top:0;
+            left:0;
+            width:168px;
+            height:263px;
+            border:1px solid red;
+            z-index: 2;
+        }
+        .table_goods_warp_li{
+          width:168px;
+          height:264px;
+          float:left;
+          position:relative;
+          background: #f9f9f9;
+          box-shadow: 5px 5px 5px 5px #ccc;
+          margin-right:20px;
+          .is_select_img{
+              position: absolute;
+              right:0;
+              top:0;
+              width:30px;
+              height:30px;
+              z-index: 1
+          }
+          .setting{
+            position: absolute;
+            left: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 170px;
+            height: 266px;
+            background: #000;
+            z-index: 2;
+            opacity:0.5;
+            filter:opacity(50);
+          }
+          .table_goods_warp_li_dl{
+            padding:1px;
+            width:168px;
+            height:264px;
+            font-size:10px;
+            position: absolute;
+            left:0;
+            top:0;
+            dt{
+              width:167px;
+              height:167px;
+              background:#fff;
+              position: relative;
+              .dl_img{
+                width:167px;
+                height:167px;
+              }
+              .setting{
+                  position: absolute;
+                  left:0;
+                  top:0;
+                  z-index: 6;
+                  width:168px;
+                  height:168px;
+                  opacity:0.5;
+                  filter:opacity(50);
+                  background:#000;
+                  cursor: not-allowed;
+                  .setting_warp{
+                    width:171px;
+                    height:53px;
+                    margin-top:64px;
+                    text-align: center;
+                    .img{
+                        width:30px;
+                        height:30px;
+                        margin:0 auto;
+                        img{
+                              width:30px;
+                              height:30px;
+                        }
+                    }
+                    .text{
+                        font-size:10px;
+                        margin-top:7px;
+                        color:#fff;
+                    }
+                  }
+              }
+            }
+            dd{
+            word-break:break-all;
+            word-wrap:break-word;
+              .price_id{
+                overflow: hidden;
+                padding:10px;
+                line-height: 16px;
+                .price_id_left{
+                  float:left;
+                  color:#E50056;
+                }
+                .price_id_right{
+                  float:right;
+                  color:#333;
+                }
+              }
+              .detail{
+                padding:0 10px 10px 10px;
+                white-space: pre-line;
+                font-size:12px;
+                height:22px;
+                color:#333;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+              }
+            }
+          }
+        }
+      }
+    }
+}

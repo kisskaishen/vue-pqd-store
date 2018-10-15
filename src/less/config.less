@@ -1,0 +1,1354 @@
+.avatar-uploader .el-upload {
+  // border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #409EFF;
+}
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+/*
+
+ <div class="empty_tips" v-show="tableData.length==0">
+    <img class="img_empty" src="../../img/empty/empty_img.png" alt="" />
+    <div class="text_empty">暂无订单</div>
+ </div>
+
+ * */
+.empty_tips{
+/*空提示字符*/
+    width:100%;
+    text-align: center;
+    line-height: 120px;
+    font-size:16px;
+    color:#666;
+    margin:90px 0;
+    .img_empty{
+        width:171px;
+        height:186px;
+    }
+    .text_empty{
+        width:85px;
+        height:16px;
+        margin:36px auto;
+    }
+}
+// .avatar {
+//   width: 40px;
+//   height: 40px;
+//   display: block;
+// }
+// 店铺名称
+// 大小
+@font14:14px;
+@font16:16px;
+
+//颜色
+@colorTitle:#000;
+@colorDetail:#eee;
+@colorCash:red;
+@colorStatus:#4CAE4C;
+
+.right_title{
+    font-size:@font16;
+    height:40px;
+    line-height: 40px;
+    position: relative;
+    padding-left:10px;
+    font-weight: bold;
+    padding: 0 20px;
+    border-bottom: 1px solid #eee;
+    .btn_send{
+        position: absolute;
+        right:120px;
+        top:0;
+    }
+}
+.right_title::before{
+    display: block;
+    content:'';
+    position: absolute;
+    top:10px;
+    left:10px;
+    width:3px;
+    height:20px;
+    background:#E50056;
+}
+#btn_sends{
+    position: absolute;
+    right:10px;
+    top:0;
+    a{
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #fff;
+        background-color: #E50056;
+        border-color: #E50056;
+        font-size: 14px;
+        border-radius: 3px;
+        display: inline-block;
+        white-space: nowrap;
+        cursor: pointer;
+        -webkit-appearance: none;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        outline: 0;
+        margin: 0;
+        -webkit-transition: .1s;
+        transition: .1s;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+}
+.verification{
+  cursor: pointer;
+}
+.table_Statistics{
+  background:#F2F6F8;
+  text-align: center;
+  overflow: hidden;
+  padding:10px;
+  .left{
+    width:50%;
+  }
+}
+.input_Statistics{
+  background:#F7F7F9;
+  overflow: hidden;
+  .left{
+    text-align: center;
+    width:50%;
+    padding:10px 0;
+    .width-120{
+      margin: 0 auto;
+    }
+  }
+}
+.up-load-img{
+  padding:10px;
+  position: relative;
+  i.delete{
+    cursor: pointer;
+    position: absolute;
+    right:3px;
+    top:3px;
+    width:14px;
+    height:14px;
+    background:url(../img/delete.png) no-repeat;
+    background-size:contain;
+  }
+  // i.delete-small{
+  //   cursor: pointer;
+  //   position: absolute;
+  //   right:-3px;
+  //   top:-3px;
+  //   width:14px;
+  //   height:14px;
+  //   background:url(../img/delete.png) no-repeat;
+  //   background-size:contain;
+  // }
+}
+.width-120{
+  width:120px;
+}
+.width-tr-140{
+  width:140px;
+  text-align: center;
+  padding:10px;
+  .width-120{
+    width:120px;
+    margin:0 auto;
+  }
+}
+.width-select-120{
+  width:120px;
+  float:left;
+  margin-right:10px;
+}
+.width-100{
+  width:100px;
+}
+.width-200{
+  width:200px;
+}
+.width-80{
+  width:80px;
+}
+.margin-left-10{
+  margin-left:10px;
+}
+//金钱颜色
+.colorCash{
+  color:@colorCash;
+  font-size:20px;
+}
+.colorCashs{
+  color:@colorCash;
+}
+.fontCash{
+  font-size:28px;
+}
+.margin-right-30{
+  margin-right:30px;
+}
+//状态颜色
+.colorStatus{
+  color:@colorStatus
+}
+//边框
+@bordereee:1px solid #eee;
+@borderf00:4px solid #f00;
+@borderddd:4px solid #ddd;
+
+//背景色
+@backgroundeee:#eee;
+@backgroundfff:#fff;
+//订单详情表格
+@backgroundorderthead:#F2F6F8;
+@backgroundordertbody:#F7F7F9;
+
+
+li{
+  list-style: none;
+}
+.parent{
+  overflow: hidden;
+}
+.left{
+  float:left;
+}
+.right{
+  float:left;
+}
+.cursor{
+  cursor: pointer;
+}
+// 输入框大小
+.box-input{
+  width:260px;
+}
+.list_info{
+    .list_info_item{
+        .title{
+            font-size:16px;
+            font-weight:bold;
+        }
+        .content{
+            span{
+                margin-right:20px;
+            }
+        }
+    }
+}
+//公共title带线
+.common-top-title{
+  font-size:20px;
+  color:#000;
+  padding:30px;
+  height:20px;
+  line-height: 20px;
+  background:#fff;
+  border-bottom:@bordereee;
+  position: relative;
+  .common_top_right_btn{
+    position: absolute;
+    right:20px;
+    top:30px;
+  }
+  .common_top_right_btn_add{
+      position: absolute;
+      right:140px;
+      top:30px;
+  }
+  .status{
+    position: absolute;
+    right:20px;
+    top:20px;
+  }
+}
+.common-top-title:before{
+    position: absolute;
+    content: '';
+    display: block;
+    left:20px;
+    top:30px;
+    width:2px;
+    height:20px;
+    background:#E50056;
+}
+.center{
+  text-align: center;
+  padding:20px;
+}
+//公共带背景色标题
+.common-bg-title{
+  padding:10px 20px;
+  margin:20px;
+  font-weight: bold;
+  background:@backgroundeee;
+}
+.clickButtonMargin{
+  padding:20px;
+}
+
+//搜索框带字
+// .search-input{
+//     display: inline-block;
+//     .leftLable{
+//         float:left;
+//         width:96px;
+//         height:40px;
+//         text-align: right;
+//         line-height: 40px;
+//         display: block;
+//     }
+//     .rightLable{
+//         float:left;
+//         display: block;
+//         width:210px;
+//         height:30px;
+//     }
+// }
+//可控搜索框带字
+  .search-input{
+    display: inline-block;
+    overflow: hidden;
+    width:346px;
+    margin-bottom:10px;
+    .leftLable{
+        float:left;
+        width:110px;
+        height:32px;
+        text-align: right;
+        line-height: 32px;
+        display: block;
+    }
+    .rightLable{
+        float:left;
+        display: block;
+        width:215px;
+        height:32px;
+    }
+    .rightLablePicker{
+        float:left;
+        display: block;
+        margin-right:10px;
+        width:70px;
+        height:30px;
+    }
+  }
+  .search_input_picker{
+    display: inline-block;
+    overflow: hidden;
+    width:580px;
+    margin-bottom:10px;
+    .leftLable{
+        float:left;
+        width:110px;
+        height:32px;
+        text-align: right;
+        line-height: 32px;
+        display: block;
+    }
+    .rightLable{
+        float:left;
+        display: block;
+        overflow: hidden;
+        .item_picker{
+            float:left;
+            width:220px;
+            height:32px;
+            margin-right:10px;
+        }
+    }
+    .rightLablePicker{
+        float:left;
+        display: block;
+        margin-right:10px;
+        width:70px;
+        height:30px;
+    }
+  }
+.item{
+  .search-input-other{
+    display: inline-block;
+    overflow: hidden;
+    margin:10px;
+    width:680px;
+    .leftLable{
+        float:left;
+        width:120px;
+        height:32px;
+        text-align: right;
+        line-height: 32px;
+        display: block;
+    }
+  }
+  .search-input{
+    display: inline-block;
+    overflow: hidden;
+    margin:10px;
+    width:346px;
+    .leftLable{
+        float:left;
+        width:110px;
+        height:32px;
+        text-align: right;
+        line-height: 32px;
+        padding-right:10px;
+        display: block;
+    }
+    .rightLable{
+        float:left;
+        display: block;
+        width:215px;
+        height:30px;
+    }
+    .rightLablePicker{
+        float:left;
+        display: block;
+        margin-right:10px;
+        width:70px;
+        height:30px;
+    }
+  }
+}
+//展示数据
+.self_input_valiate{
+    -webkit-appearance: none;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    height: 32px;
+    line-height: 1;
+    outline: 0;
+    padding: 0 15px;
+    -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 100%;
+}
+.show-input{
+    display: inline-block;
+    overflow: hidden;
+    margin:10px;
+    width:300px;
+    .leftLable{
+        float:left;
+        width:90px;
+        height:32px;
+        text-align: right;
+        line-height: 32px;
+        display: block;
+    }
+    .rightLable{
+        float:left;
+        display: block;
+        width:215px;
+        height:30px;
+    }
+}
+
+/*
+ *  table
+ *
+ * */
+.show_list_table{
+    width:100%;
+    border-collapse: collapse;
+    margin-bottom:20px;
+    text-align: center;
+    border:1px solid #eee;
+    thead{
+        tr{
+            th{
+                padding:10px;
+                background:#F9F9F9;
+                // border:1px solid #eee;
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                padding:10px;
+                // border:1px solid #eee;
+            }
+        }
+    }
+}
+/*
+ show_list_table_evaluate
+
+ * */
+.show_list_table_evaluate_warp{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background:#fff;
+    margin:0 20px 40px 20px;
+//  width:100%;
+}
+.show_list_table_evaluate{
+    width:1500px;
+    border-collapse: collapse;
+    margin-bottom:20px;
+    border:1px solid #eee;
+    background:#fff;
+    thead{
+        tr{
+            th{
+                height:60px;
+                line-height: 60px;
+                background:#F5F5F5;
+                text-align: left;
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                background:#fff;
+                border:1px solid #f5f5f5;
+                padding:10px;
+                .product_name{
+                    color:#666
+                }
+                .tiems{
+                    margin-top:13px;
+                    font-size:14px;
+                    color:#999
+                }
+                .items_btn{
+                    margin:5px 0;
+                }
+            }
+        }
+    }
+}
+
+//分页
+
+.pagination{
+   width:100%;
+   text-align: center;
+   padding:10px;
+}
+
+//table 显示
+.show-order-product{
+    width:100%;
+    border-collapse:collapse;
+    text-align: center;
+    thead{
+      tr{
+        th{
+          background:@backgroundorderthead;
+          padding:10px;
+          font-weight:none;
+        }
+      }
+    }
+    tbody{
+      tr{
+//      border-bottom:10px solid @backgroundorderthead;
+        td{
+          background:@backgroundordertbody;
+          height:100px;
+        }
+        td{
+          text-align: center;
+          .good_name{
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+              overflow: hidden;
+          }
+        }
+        .goods_name{
+          width:340px;
+          text-align: center
+        }
+        .goods{
+          width:100px;
+        }
+        .order_state{
+          width:140px;
+        }
+        .goods_price{
+          width:80px;
+        }
+        .list_img{
+          width:80px;
+        }
+        .order_state{
+          width:100px;
+        }
+        .order_service{
+          width:80px;
+        }
+        .order_amount{
+          width:80px;
+        }
+        .success_time{
+          width:80px;
+        }
+        .service_type{
+          width:80px;
+        }
+        .search_1{
+          width:80px;
+        }
+      }
+    }
+  }
+//table 展示一行
+.show-order-detail{
+    width:100%;
+    border-collapse:collapse;
+    thead{
+      tr{
+        th{
+          background:@backgroundorderthead;
+          padding:10px;
+          font-weight:none;
+        }
+        .first-th{
+            text-align: left;
+            button{
+                margin-left:20px;
+                padding:5px 10px;
+                text-align: center;
+            }
+        }
+      }
+    }
+    tbody{
+      tr{
+        td{
+          background:@backgroundordertbody;
+          text-align: center;
+          padding:10px;
+        }
+      }
+    }
+  }
+//退货描述
+.return-goods{
+  margin-top:40px;
+  width:100%;
+  border-collapse:collapse;
+  thead{
+    tr{
+      th{
+        background:@backgroundorderthead;
+        padding:10px;
+        font-weight:none;
+        border:1px solid #ddd;
+      }
+      .first-th{
+          text-align: left;
+          button{
+              margin-left:20px;
+              padding:5px 10px;
+              text-align: center;
+          }
+      }
+    }
+  }
+  tbody{
+    tr{
+      td{
+        background:@backgroundordertbody;
+        text-align: center;
+        padding:10px;
+        border:1px solid #ddd;
+      }
+    }
+  }
+}
+//body,html{padding:0;margin:0;color:#666;font-size:12px;font-family:tahoma,arial,sans-serif;}
+h1, h2, h3, h4, h5, h6,
+form, div, p, i, img,
+ ul, li, ol, table, tr, td,th,
+ fieldset, label, legend,
+ input,body,html ,dl,dt,dd
+ { margin:0;padding:0;}
+li{list-style:none;}
+a img{border:none;}
+a:link{text-decoration:none;color:#07519A;}
+a:visited{text-decoration:none;color:#07519A;}
+a:active,a:hover{text-decoration:underline;color:#07519A;}
+
+.list_info{
+    color:#666;
+    .list_info_item{
+        margin-bottom:20px;
+        .title{
+            font-size:14px;
+            font-weight:bold;
+            color:#000;
+            padding:10px 0;
+        }
+        .content{
+            background:#F9F9F9;
+            padding:10px 10px;
+            overflow: hidden;
+            span{
+                margin-right:20px;
+                width:230px;
+                float:left;
+                display: inline-block;
+            }
+        }
+    }
+}
+/*
+<div class="item_detail">
+    <div class="title">
+        <div class="tits">收货信息</div>
+    </div>
+</div>
+ *
+ * */
+.item_detail{
+    margin:5px 0;
+//  padding:0 10px;
+    .title{
+        .tits{
+            position: relative;
+            padding-left:10px;
+            font-size:16px;
+            font-weight:bold;
+            border-left:4px solid red;
+        }
+    }
+}
+
+
+/*
+<div class="table_title">
+    <div class="table_title_left">优惠券统计列表</div>
+    <div class="table_title_right">优惠券统计列表</div>
+</div>
+ * */
+.table_title{
+    overflow: hidden;
+    padding:10px;
+    .table_title_left{
+        float:left;
+        padding-top:10px;
+        .table_title_left_title{
+            height:20px;
+            line-height: 20px;
+            padding-left:10px;
+            border-left:4px solid red;
+        }
+    }
+    .table_title_right{
+        float:right;
+    }
+}
+
+
+
+.spacing-form{
+    margin-bottom:10px;
+    overflow: hidden;
+    .spacing-form-warp-left{
+        float:left;
+        width:49%;
+    }
+    .spacing-form-warp-right{
+        float:right;
+        width:49%;
+    }
+}
+
+
+.up-load-img{
+  padding:10px;
+  position: relative;
+  i.delete{
+    cursor: pointer;
+    position: absolute;
+    right:3px;
+    top:3px;
+    width:14px;
+    height:14px;
+    background:url(../img/delete.png) no-repeat;
+    background-size:contain;
+  }
+}
+.avatar-uploader .el-upload {
+  // border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #409EFF;
+}
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 25px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.admin_left_menu .el-submenu .el-menu-item{
+   height: 40px;
+    line-height: 40px;
+    padding: 0 45px;
+    min-width: 200px;
+}
+.admin_left_menu .el-menu-item,.admin_left_menu  .el-submenu__title{
+    height: 40px;
+    line-height: 40px;
+}
+.pagination{
+    padding:20px 0;
+    text-align: center;
+}
+// 大小
+@font14:14px;
+@font16:16px;
+
+//颜色
+@colorTitle:#000;
+@colorDetail:#eee;
+@colorCash:red;
+@colorStatus:#4CAE4C;
+
+//金钱颜色
+.colorCash{
+  color:@colorCash
+}
+.fontCash{
+  font-size:28px;
+}
+//状态颜色
+.colorStatus{
+  color:@colorStatus
+}
+//边框
+@bordereee:1px solid #eee;
+@borderf00:4px solid #f00;
+@borderddd:4px solid #ddd;
+
+//背景色
+@backgroundeee:#eee;
+@backgroundfff:#fff;
+//订单详情表格
+@backgroundorderthead:#F5F5F5;
+@backgroundordertbody:#F9F9F9;
+
+a{
+    text-decoration: none;
+}
+#app a{
+    list-style: none;
+}
+li{
+  list-style: none;
+}
+.cursor{
+  cursor: pointer;
+}
+
+/*
+单行带字input
+ * */
+.width-120-warp{
+    overflow:hidden;
+    .width-120{
+        width:120px;
+        float:left;
+    }
+    span{
+        display: inline-block;
+        line-height: 40px;
+        margin-left:10px;
+    }
+}
+.height-32{
+    height:32px;
+    .el-button{
+        padding:8px 20px;
+    }
+}
+
+/*
+<div class="img_warp_delete">
+    <img class='imgs' :src="googsDetail.original_img" alt="" />
+    <span class="close">x</span>
+</div>
+ *
+ * */
+.img_warp_delete{
+    position: relative;
+    display: inline-block;
+    border:1px solid #eee;
+    .imgs{
+        height:100px;
+    }
+    .close{
+        position: absolute;
+        text-align: center;
+        line-height: 14px;
+        top:-7px;
+        right:-7px;
+        width:14px;
+        height:14px;
+        border-radius: 50%;
+        background:red;
+        color:#fff;
+    }
+}
+/*
+<div class="height_32_table_bottom">
+    <el-button type="danger">确认发货</el-button>
+    <el-button type="danger">返回</el-button>
+</div>
+ * 底部按钮
+ * */
+.height_32_table_bottom{
+    padding:20px 0;
+    margin-bottom:20px;
+     height:32px;
+     text-align: center;
+    .el-button{
+        padding:8px 20px;
+    }
+}
+/*
+<div class="width_120_warp">
+    <el-input v-model="input" placeholder="商户名"></el-input>
+</div>
+ * */
+.width_120_warp{
+    width:120px;
+}
+
+/*
+<div class="select_thirty">
+    <div class="width_120_warp">
+      <el-select v-model="value" placeholder="请选择">
+        <el-option
+          v-for="item in options"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value">
+        </el-option>
+      </el-select>
+    </div>
+    <div class="width_120_warp">
+      <el-select v-model="value" placeholder="请选择">
+        <el-option
+          v-for="item in options"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value">
+        </el-option>
+      </el-select>
+    </div>
+</div>
+ * 多个select
+ * */
+.select_thirty{
+    overflow: hidden;
+    .width_120_warp{
+        width:120px;
+        float:left;
+        margin-right:10px;
+    }
+}
+/*
+<div class="system_module_warp">
+    <div class="system_module">
+        <div class="system_module_title">
+            <div class="system_module_title_left">
+                系统>权限
+            </div>
+            <div class="system_module_title_right">
+                <el-button type="primary">管理模型</el-button>
+                <el-button type="primary">编辑导航</el-button>
+            </div>
+        </div>
+        <div class="system_module_content">
+            <ul>
+                <li>角色管理[ <span>显示</span> ]</li>
+            </ul>
+        </div>
+    </div>
+</div>
+ *
+ *
+ * */
+.system_module_warp{
+    padding:10px;
+    .system_module{
+        border:1px solid #eee;
+        .system_module_title{
+            padding:10px;
+            background:#eee;
+            overflow: hidden;
+            .system_module_title_left{
+                float:left;
+                line-height: 40px;
+            }
+            .system_module_title_right{
+                float:right;
+            }
+        }
+        .system_module_content{
+            padding:10px;
+            ul{
+                overflow: hidden;
+                .show_li{
+                    float:left;
+                    margin-bottom:10px;
+                    margin-right:40px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*
+<div class="search_admin_list_table">
+    <div class="search_admin_list_table_title">
+        <span>
+            商品列表
+        </span>
+    </div>
+    <div class="search_btn">
+        <div class="search_content">
+            <span>商户名</span>
+            <div class="width-120">
+                <el-input v-model="input" placeholder="商户名"></el-input>
+            </div>
+        </div>
+        <div class="search_content">
+            <span>关键词</span>
+            <div class="width-120">
+                <el-input v-model="input" placeholder="搜索词"></el-input>
+            </div>
+        </div>
+        <div class="search_content">
+            <el-button type="primary">查询</el-button>
+        </div>
+    </div>
+</div>
+ *  search_table
+ *
+ * */
+ .search_contents{
+     float: left;
+    padding-left: 10px;
+    margin-bottom: 10px
+ }
+.search_admin_list_table{
+    background:#fff;
+    .search_admin_list_table_title{
+        padding:10px;
+        background:#f5f5f5;
+        font-weight:bold;
+    }
+    .search_btn{
+        padding:10px 0;
+        overflow: hidden;
+        .search_content{
+            float:left;
+            padding-left:10px;
+            margin-bottom:10px;
+            width:330px;
+            span{
+                float:left;
+                display: inline-block;
+                line-height: 32px;
+                margin-right:10px;
+                width:112px;
+                text-align: right;
+            }
+            .width-120{
+                float:left;
+                width:200px;
+                line-height: 32px;
+            }
+        }
+    }
+    .table_list{
+        padding:10px;
+        margin-bottom:20px;
+    }
+}
+.demo-ruleForm{
+    .search_btn{
+        padding:10px 0;
+        overflow: hidden;
+        .search_content{
+//          float:left;
+            overflow: hidden;
+            padding-left:10px;
+            margin-bottom:20px;
+            span{
+                float:left;
+                display: inline-block;
+                line-height: 32px;
+                margin-right:10px;
+                width:120px;
+                width:100px;
+                text-align: right;
+            }
+            .width-120{
+                float:left;
+                width:217px;
+            }
+        }
+    }
+}
+/*
+
+ * show_list
+ * */
+.order_detail_list{
+    .item_detail{
+        padding-bottom:30px;
+        .title{
+            padding:10px;
+            font-weight:bold;
+            .tits{
+                padding-left:10px;
+                position:relative;
+                height:14px;
+                line-height:14px;
+            }
+            .tits:before{
+                display: block;
+                content:'';
+                width:2px;
+                height:14px;
+                background:#42B983;
+                position: absolute;
+                left:0;
+                top:0;
+            }
+        }
+        .order_detail_table{
+            padding:10px;
+        }
+    }
+}
+/*
+ * input
+ *
+  <div class="warp_input_label">
+    <div class="text_label">规格</div>
+    <div class="input_width">
+        <el-input v-model="input" placeholder="请输入内容"></el-input>
+    </div>
+  </div>
+ * */
+.warp_input_label{
+    overflow: hidden;
+    .text_label{
+        width:110px;
+        float:left;
+        line-height: 40px;
+        text-align: right;
+        padding-right:10px;
+    }
+    .input_width{
+        float:left;
+        line-height: 40px;
+    }
+}
+.show_list_table_info{
+    width:100%;
+    border-collapse: collapse;
+    thead{
+        tr{
+            td:first-child{
+                width:120px;
+                text-align: right;
+            }
+            td{
+                padding:10px;
+                border:1px solid #eee;
+            }
+        }
+    }
+    tbody{
+        tr{
+            td:first-child{
+                width:120px;
+                text-align: right;
+            }
+            td{
+                padding:10px;
+                border:1px solid #eee;
+            }
+        }
+    }
+}
+.show_list_table_product{
+    width:100%;
+    border-collapse: collapse;
+    margin:20px 0;
+    border:1px solid #eee;
+    tbody{
+        tr:first-child{
+            td{
+                border:none;
+            }
+        }
+        tr{
+            td:first-child{
+                width:120px;
+                text-align: right;
+                border-right:0;
+            }
+            td{
+                padding:10px;
+                border:1px solid #eee;
+            }
+        }
+    }
+}
+/**
+ *
+ * up_load
+ *
+ */
+.warp_upLoad{
+    overflow: hidden;
+    .warp_upLoad_left{
+        float:left;
+        width:150px;
+        height:150px;
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+    .warp_upLoad_right{
+        float:left;
+        line-height: 150px;
+    }
+}
+
+/*
+<div class="warp">
+     <div class="explain_warp">
+        <span class="item_title">平台申诉</span>
+        <span class="times">2018-05-06 23:12:20</span>
+     </div>
+     <div class="content_warp">
+        <div class="ites">
+            <div class="label">申诉人：</div>
+            <div class="label_name">贾文彪</div>
+        </div>
+        <div class="ites">
+            <div class="label">申诉说明：</div>
+            <div class="label_name">没收到，退款。要不给我再发一份要不给我退款</div>
+        </div>
+        <div class="ites">
+            <div class="label">凭证：</div>
+            <div class="label_name">
+                <ul class="show_img">
+                    <li><img src="https://cdn2.pinquduo.cn/20180506231220736579.jpg"/></li>
+                </ul>
+                <span class="preview">
+                    <!--<a href="https://cdn2.pinquduo.cn/20180506231220736579.jpg" target="_blank " >预览图片<a>-->
+                </span>
+            </div>
+        </div>
+      </div>
+ </div>
+ * */
+
+ .order_detail_table .current_system .warp{
+    margin-top:20px;
+    .explain_warp{
+       padding:10px 0;
+         .times{
+            color:#666;
+        }
+        .item_title{
+             padding:10px 20px;
+             color:#fff;
+             line-height: 1.6;
+             text-align: center;
+             background:url(../img/icon_label.png) no-repeat;
+             background-size:cover;
+         }
+     }
+     .content_warp{
+        padding: 10px 0;
+        background: #eee;
+        overflow: hidden;
+        padding: 20px;
+        border-radius: 10px;
+          color:#3c8dbc;
+          .ites{
+              overflow: hidden;
+              line-height: 1.8;
+            .label{
+                 float:left;
+                 width:140px;
+                 text-align: right;
+                color:#000;
+             }
+             .label_name{
+                float:left;
+                position:relative;
+             }
+             .show_img{
+                overflow: hidden;
+                li{
+                    width:80px;
+                    height:80px;
+                    img{
+                        width:80px;
+                        height:80px;
+                    }
+                }
+             }
+             .preview{
+                position: absolute;
+                cursor: pointer;
+                right:-67px;
+                bottom:0;
+             }
+         }
+      }
+ }
+ .msg_logo_url{
+     margin-right:10px;
+     width:40px;
+     height:40px;
+ }

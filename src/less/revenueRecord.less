@@ -1,0 +1,114 @@
+.shopCoupons{
+    background:#fff;
+    .count_module{
+       .show_num{
+           overflow: hidden;
+           padding:20px;
+           .item{
+               float:left;
+               width:25%;
+               .warp{
+                    margin:0 20px;
+                    height:120px;
+                    min-width: 180px;
+                    background:#F8F8F8;
+                    text-align: center;
+                    padding:20px;
+                    .tit{
+                        // margin:5px;
+                        // position: relative;
+                        // font-size:14px;
+                    }
+                    .tits{
+                        position: relative;
+                        height:16px;
+                        font-size:16px;
+                        margin:20px;
+                    }
+                    .amount::before
+                    ,.money::before
+                    ,.withdrawal::before
+                    ,.margin::before{
+                        position: absolute;
+                        left:0px;
+                        top:1px;
+                        width:18px;
+                        height:18px;
+                        display: block;
+                        content:'';
+                    }
+                    .amount,
+                    .margin,
+                    .withdrawal,
+                    .money,{
+                        margin:5px auto;
+                        position: relative;
+                        font-size:14px;
+                        width:120px;
+                    }
+                    .amount::before{
+                        background:url('../img/login/account_icon_amountto.png')
+                    }
+                    .money::before{
+                        background:url('../img/login/account_icon_cash.png')
+                    }
+                    .withdrawal::before{
+                        background:url('../img/login/account_icon_account.png')
+                    }
+                    .margin::before{
+                        background:url('../img/login/account_icon_bail.png')
+                    }
+                    .cash{
+                        font-size:20px;
+                        color:#E50056;
+                        margin:16px;
+                        height:24px;
+                        font-weight: bold;
+                    }
+               }
+           }
+       } 
+    }
+    .statistics{
+        padding:20px 20px 0 20px;
+        .count{
+            padding:20px 0;
+           .count_item{
+               display: inline-block;
+               font-size:16px;
+               margin-right:40px;
+               span{
+                   color:red;
+               }
+           } 
+        }
+    }
+    .main{
+        padding:10px 0;
+        background:@backgroundfff;
+        position: relative;
+        .rightClickButton{
+            position: absolute;
+            right:20px;
+            top:10px;
+        }
+        .list{
+            padding:20px;
+        }
+    }
+    .form-create{
+        .width-controll{
+            // width:180px;
+        }
+        .width-controll-small{
+            float:left;
+            width:80px;
+        }
+        .text-margin{
+            margin:0 10px;
+        }
+        .el-form-item{
+            margin-bottom:20px;
+        }
+    }
+}

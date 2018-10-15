@@ -1,0 +1,749 @@
+.self_chat{
+    min-width:1200px;
+    height:100%;
+    background:@backgroundfff;
+    position: relative;
+    .left{
+        width:350px;
+        height:100%;
+        overflow: hidden;
+        .top{
+            height:44px;
+            width:350px;
+            text-align: center;
+            line-height: 44px;
+            color:#fff;
+            font-size: 16px;
+            background:#e92236;
+            position: relative;
+        }
+                /*滚动条样式*/
+        .contact_warp::-webkit-scrollbar {/*滚动条整体样式*/
+            width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+            height: 4px;
+        }
+        .contact_warp::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.2);
+        }
+        .contact_warp::-webkit-scrollbar-track {/*滚动条里面轨道*/
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            border-radius: 0;
+            background: rgba(0,0,0,0.1);
+        }
+        .contact_warp{
+            width:350px;
+            position:absolute;
+            top:44px;
+            left:0;
+            right:0;
+            bottom:0;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+        .contact{
+            li.active{
+                background:#eee;
+            }
+            li{
+               padding:10px;
+               border-bottom:1px solid #eee;
+               overflow: hidden;
+               cursor: pointer;
+                .left_icon{
+                    width:40px;
+                    height:40px;
+                    background:chocolate;
+                    border-radius: 50%;
+                    float:left;
+                    position: relative;
+                    .icon{
+                        width:40px;
+                        height:40px;
+                        border-radius: 50%;
+                    }
+                    .news_tips{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        height: 14px;
+                        width: 14px;
+                        border-radius: 7px;
+                        background-color: #fff;
+                        padding: 2px;
+                        box-sizing: border-box;
+                        .ricle{
+                            height: 10px;
+                            width: 10px;
+                            background-color: #e92236;
+                            display: block;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+                .left_content{
+                    padding-left:10px;
+                    overflow: hidden;
+                    .title{
+                        font-size:16px;
+                        color:#000;
+                        .times{
+                           font-size:12px;
+                           color:#ccc; 
+                           float:right;
+                        }
+                    }
+                    .detail{
+                        width:220px;
+                        font-size:14px;
+                        color:#ccc; 
+                        overflow: hidden;
+                        text-overflow:ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+    .center_chat{
+        min-width:520px;
+        position: absolute;
+        left:350px;
+        right:330px;
+        bottom:0;
+        top:0;
+        height:100%;
+        // box-shadow: 5px 0px 5px -5px black, -5px 0px 5px -5px black;
+        box-shadow: 6px 0 6px -6px rgba(0,0,0,.2), -6px 0 6px -6px rgba(0,0,0,.2);
+        .top{
+            width:100%;
+            height:44px;
+            text-align: center;
+            line-height: 44px;
+            color:#fff;
+            background:#e92236;
+            position: absolute;
+            left:0;
+            top:0;
+            font-size: 16px;
+        }
+        .content{
+            /*滚动条样式*/
+            .warp::-webkit-scrollbar {/*滚动条整体样式*/
+                width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+                height: 4px;
+            }
+            .warp::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+                border-radius: 5px;
+                -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+                background: rgba(0,0,0,0.2);
+            }
+            .warp::-webkit-scrollbar-track {/*滚动条里面轨道*/
+                -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+                border-radius: 0;
+                background: rgba(0,0,0,0.1);
+            }
+            .warp{    
+                overflow-x: hidden;
+                overflow-y: auto;
+                // overflow: auto;
+                position: absolute;
+                top:44px;
+                left:0;
+                right:0;
+                bottom:161px;
+                .info_auto{
+                    .search_info{
+                        padding:10px 0;
+                        text-align: center;
+                    }
+                    .shop_chat{
+                        .times{
+                            padding:10px 0;
+                            text-align: center;
+                        }
+                        .char_content{
+                            overflow: hidden;
+                            .right_name{
+                                padding:10px;
+                                overflow: hidden;
+                                .chat_info{
+                                    float:right;
+                                    max-width:60%;
+                                    margin-right:10px;
+                                    background: #fff0f2;
+                                    border-radius: 8px;
+                                    color:#000;
+                                    padding:10px;
+                                    .show_imgs{
+                                        width:80px;
+                                        height:80px;
+                                    }
+                                }
+                                .goodsLink{
+                                    float:right; 
+                                    margin-right:10px;
+                                }
+                                .chat_icon{
+                                    float:right;
+                                    width:32px;
+                                    height:32px;
+                                    img{                     
+                                        width:32px;
+                                        height:32px; 
+                                        border-radius: 50%;
+                                    }
+                                }
+                            }
+                            .left_name{
+                                // float:left;
+                                padding:10px;
+                                overflow: hidden;
+                                .chat_info{
+                                    float:left;
+                                    max-width:60%;
+                                    margin-left:10px;
+                                    background: #fff0f2;
+                                    border-radius: 8px;
+                                    color:#000;
+                                    padding:10px;
+                                }
+                                .goodsLink{
+                                    float:left; 
+                                    margin-left:10px;
+                                }
+                                .chat_icon{
+                                    float:left;
+                                    width:32px;
+                                    height:32px;
+                                    img{                     
+                                        width:32px;
+                                        height:32px; 
+                                        border-radius: 50%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .input_chat{
+            width:100%;
+            border-top:1px solid #eee;
+            height:160px;
+            position: absolute;
+            bottom:0;
+            left:1px;
+            // right:0;
+            background:#fff;
+            overflow: hidden;
+            .powel{
+                height:20px;
+                padding:6px 10px;
+                img{
+                    cursor: pointer;
+                }
+            }
+            .input_center{
+                width: 100%;
+                height: 78px;
+                border: 0;
+                resize: none;
+                outline: none;
+                padding: 6px 10px;
+                box-sizing: border-box;
+                font-size: 16px;
+                color: #333;
+                .textareas{
+                    border:none;
+                }
+            }
+            .btn_input{
+                width:100%;
+                text-align: right;
+                .btns{
+                    margin-top:5px;
+                    margin-right:10px;
+                }
+            }
+        }
+    }
+    .right_chat{
+        position: absolute;
+        right:0;
+        bottom:44px;
+        top:0;
+        min-width:330px;
+        .top_chat{
+            .list_chat{
+                overflow: hidden;
+                padding: 10px 30px;
+                height: 24px;
+                line-height: 44px;
+                background-color: #e92236;
+                color:#ccc;
+                li.active{
+                    color:#fff;
+                }
+                li{
+                    cursor: pointer;
+                    float:left;
+                    width: 88px;
+                    height:24px;
+                    line-height: 24px;
+                    text-align: center;
+                    font-size: 16px;
+                    border-right:1px solid #fff;
+                }
+                li:last-child{
+                    border-right:none;
+                }
+            }
+        }
+        .content{
+            position: relative;
+            right:0;
+            bottom:0;
+            left:0;
+            top:0;
+            height:100%;
+            .no_chat{
+                width:100%;
+                text-align: center;
+                padding-top:160px;
+                font-size:20px;
+                color:#aaa;
+            }
+            .show_once{
+                padding:0 10px;
+                /*滚动条样式*/
+                .show_goods::-webkit-scrollbar {/*滚动条整体样式*/
+                    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+                    height: 4px;
+                }
+                .show_goods::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+                    border-radius: 5px;
+                    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+                    background: rgba(0,0,0,0.2);
+                }
+                .show_goods::-webkit-scrollbar-track {/*滚动条里面轨道*/
+                    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+                    border-radius: 0;
+                    background: rgba(0,0,0,0.1);
+                }
+                .show_goods{    
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    position: absolute;
+                    top:98px;
+                    left:0;
+                    right:0;
+                    bottom:60px;
+                    li{
+                        width:310px;
+                        height:100px;
+                        margin:10px auto;
+                        border-radius: 8px;
+                        box-shadow: 0 0 6px rgba(0,0,0,.1);
+                        .goods_detail{
+                            padding:10px;
+                            overflow: hidden;
+                            position: relative;
+                            .goods_img{
+                                float:left;
+                                width:80px;
+                                height:80px;
+                                img{
+                                    width:80px;
+                                    height:80px;
+                                }
+                            }
+                            .goods_details{
+                                margin-left:90px;
+                                .psds{
+                                    margin-bottom:10px;
+                                    color:#000;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space :nowrap
+                                }
+                                .psd{
+                                    font-size:12px;
+                                    line-height: 1.5;
+                                    color:#333;
+                                }
+                                .price{
+                                    color:red;
+                                }
+                            }
+                            .send_info{
+                                position: absolute;
+                                right:10px;
+                                bottom:10px;
+                                width:48px;
+                                height:26px;
+                                .btns_send{
+                                    outline: none;
+                                    cursor: pointer;
+                                    width:48px;
+                                    height:26px;
+                                    color:#333;
+                                    background:#fff;
+                                    border-radius: 5px;
+                                    border:1px solid #eee;
+                                }
+                            }
+                        }
+                    }
+                }
+                .title{
+                    height: 56px;
+                    font-size: 18px;
+                    color: #333;
+                    text-align: center;
+                    line-height: 56px;
+                }
+                .explain{
+                    height: 42px;
+                    line-height: 42px;
+                    text-align: center;
+                    color: #666;
+                    font-size: 14px;
+                    border-top: 1px solid #eee;
+                    border-bottom: 1px solid #eee;
+                    box-sizing: border-box;
+                    padding-left: 10px;
+                }
+            }
+            .show_thr{
+                padding:20px;
+                .edit_content{
+                    padding:10px 0;
+                    line-height: 1.8;
+                    li{
+                        overflow: hidden;
+                        cursor: pointer;
+                        .text{
+                            display: inline-block;
+                            width:235px;
+                            overflow: hidden;
+                            text-overflow:ellipsis;
+                            white-space: nowrap;
+                        }
+                        .right_show{
+                            float:right;
+                            .chat_icon_add{
+                                margin-right:10px;
+                                cursor: pointer;
+                                width:14px;
+                                height:14px;
+                            }
+                            .chat_icon_delete{
+                                cursor: pointer;
+                                width:14px;
+                                height:14px;
+                            }
+                        }
+                    }
+                }
+                .show_thr_add{
+                    padding:18px 0;
+                    border-bottom:1px solid #eee;
+                    overflow: hidden;
+                    .addReply{
+                        float:right;
+                        width:15px;
+                        height:15px;
+                        cursor: pointer;
+                    }
+                }
+                .show_thr_top{
+                    .editReply{
+                        padding-left:20px;
+                        position: relative;
+                        display: block;
+                        cursor: pointer;
+                    }
+                    .editReply.active{
+                        color:red;
+                    }
+                    .editReply.active:before{
+                        display: block;
+                        content:'';
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        width:16px;
+                        height:16px;
+                        background:url("../img/edit.png") no-repeat;
+                        background-size:contain;
+                    }
+                    .editReply:before{
+                        display: block;
+                        content:'';
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        width:16px;
+                        height:16px;
+                        background:url("../img/edit_default.png") no-repeat;
+                        background-size:contain;
+                    }
+                }
+            }
+            .show_sec{
+                /*滚动条样式*/
+                .show_sec_order::-webkit-scrollbar {/*滚动条整体样式*/
+                    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+                    height: 4px;
+                }
+                .show_sec_order::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+                    border-radius: 5px;
+                    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+                    background: rgba(0,0,0,0.2);
+                }
+                .show_sec_order::-webkit-scrollbar-track {/*滚动条里面轨道*/
+                    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+                    border-radius: 0;
+                    background: rgba(0,0,0,0.1);
+                }
+                .show_sec_order{    
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    position: absolute;
+                    top:98px;
+                    left:0;
+                    right:0;
+                    bottom:60px;
+                    .no_order{
+                        text-align: center;
+                        font-size:16px;
+                        margin-top:100px;
+                        color:#ccc;
+                    }
+                    .order_style{
+                        padding:10px;
+                        font-size:14px;
+                        li{
+                            padding:15px;
+                            width: 310px;
+                            margin-bottom:20px;
+                            box-sizing: border-box;
+                            border-radius: 10px;
+                            -moz-box-shadow: 0 0 6px rgba(0,0,0,.1);
+                            -webkit-box-shadow: 0 0 6px rgba(0,0,0,.1);
+                            box-shadow: 0 0 6px rgba(0,0,0,.1);  
+                            .tit_order{
+                                line-height: 1.8;
+                                overflow: hidden;
+                                .status{
+                                    color:red;
+                                }
+                                .btns_send{
+                                    cursor: pointer;
+                                    outline: none;
+                                    float:right;
+                                    padding:5px 15px;
+                                    color:#333;
+                                    background:#fff;
+                                    border-radius: 5px;
+                                    border:1px solid #eee;
+                                }
+                            }
+                            .tit_order_detail{
+                                padding:10px 0;
+                                overflow: hidden;
+                                dt{
+                                    width:80px;
+                                    height:80px;
+                                    float:left;
+                                    img{
+                                        width:80px;
+                                        height:80px;
+                                    }
+                                }
+                                dd{
+                                    height:80px;
+                                    margin-left:90px;
+                                    position: relative;
+                                    .goods_name{
+                                        font-size:14px;
+                                        display: -webkit-box;
+                                        -webkit-box-orient: vertical;
+                                        -webkit-line-clamp: 2;
+                                        overflow: hidden;
+                                    }
+                                    .specifications{
+                                        width:100%;
+                                        position: absolute;
+                                        bottom:0;
+                                        left:0;
+                                        overflow: hidden;
+                                        font-size:12px;
+                                        vertical-align: bottom;
+                                        .num{
+                                            float: right;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .shop_order_status{
+                    overflow: hidden;
+                    border-bottom:1px solid #eee;
+                    li.active{
+                        color:#333;
+                    }
+                    li{
+                        float:left;
+                        width:50%;
+                        padding:10px 0;
+                        text-align: center;
+                        cursor: pointer;
+                        color:#ccc;
+                    }
+                }
+                .show_sec_status{
+                    overflow: hidden;
+                    border-bottom:1px solid #eee;
+                    li{
+                        float:left;
+                        width:20%;
+                        padding:10px 0;
+                        text-align: center;
+                        cursor: pointer;
+                        color:#ccc
+                    }
+                    li.active{
+                        color:#333
+                    }
+                }
+                .show_sec_tit{
+                    overflow: hidden;
+                    li{
+                        float:left;
+                        width:50%;
+                        padding:20px 0;
+                        text-align: center;
+                        cursor: pointer;
+                        span.active{
+                            background:#e92236;
+                            color:#fff;
+                            padding:10px;
+                            border-radius: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.paginations{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px 0;
+    background:#fff;
+    overflow: hidden;
+    cursor: pointer;
+    width:320px;
+    margin:0 auto;
+    .up_or_down{
+        float:left;
+        width: 170px;
+        height: 34px;
+        line-height: 34px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        text-align: center;
+        .up_arrow{
+            margin:0 1px;
+        }
+    }
+    .explains{
+        float:left;
+        font-size: 14px;
+        color: #999;
+        height: 34px;
+        line-height: 34px;
+        margin-left:10px;
+    }
+    .input_count{
+        float:left;
+        height: 34px;
+        width: 40px;
+        text-align: center;
+        line-height: 34px;
+        margin-left:10px;
+        .input_return{
+            cursor: pointer;
+            width:40px;
+            height: 34px;
+            border:none;
+            text-align: center;
+            border-radius: 10px;
+            outline: none;
+            border: 1px solid #ccc;
+        }
+    }
+    .right_arrow{
+        float:left;
+        height: 34px;
+        width: 40px;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        line-height: 34px;
+        margin-left:10px;
+    }
+}
+.goodsLink{
+    width:300px;
+    background:#fff0f2;
+    border-radius: 8px;
+    .tit_order_detail{
+        padding:10px;
+        overflow: hidden;
+        dt{
+            width:80px;
+            height:80px;
+            float:left;
+            img{
+                width:80px;
+                height:80px;
+            }
+        }
+        dd{
+            height:80px;
+            margin-left:90px;
+            position: relative;
+            .goods_name{
+                font-size:14px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+            }
+            .specifications{
+                width:100%;
+                position: absolute;
+                bottom:0;
+                left:0;
+                overflow: hidden;
+                font-size:12px;
+                vertical-align: bottom;
+                .num{
+                    float: right;
+                }
+                .price{
+                    color:red;
+                }
+            }
+        }
+    }
+}
